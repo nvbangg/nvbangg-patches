@@ -92,6 +92,7 @@ internal lateinit var setPlaybackSpeedMethodReference: MethodReference
 
 val videoInformationPatch = bytecodePatch(
     description = "Hooks YouTube to get information about the current playing video.",
+    use = false
 ) {
     dependsOn(
         sharedExtensionPatch,

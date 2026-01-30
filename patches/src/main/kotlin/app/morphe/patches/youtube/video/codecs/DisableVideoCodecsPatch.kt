@@ -19,6 +19,7 @@ private const val EXTENSION_CLASS_DESCRIPTOR =
 val disableVideoCodecsPatch = bytecodePatch(
     name = "Disable video codecs",
     description = "Adds options to disable HDR and VP9 codecs.",
+    use = false
 ) {
     dependsOn(
         sharedExtensionPatch,

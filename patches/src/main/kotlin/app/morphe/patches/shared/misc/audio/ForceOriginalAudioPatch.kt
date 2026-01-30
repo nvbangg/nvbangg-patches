@@ -39,6 +39,7 @@ internal fun forceOriginalAudioPatch(
 ) = bytecodePatch(
     name = "Force original audio",
     description = "Adds an option to always use the original audio track.",
+    use = false
 ) {
 
     block()

@@ -85,6 +85,7 @@ private val swipeControlsResourcePatch = resourcePatch {
 val swipeControlsPatch = bytecodePatch(
     name = "Swipe controls",
     description = "Adds options to enable and configure volume and brightness swipe controls.",
+    use = false
 ) {
     dependsOn(
         sharedExtensionPatch,

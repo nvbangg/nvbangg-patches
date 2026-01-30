@@ -23,6 +23,7 @@ private const val EXTENSION_CLASS_DESCRIPTOR =
 
 val spoofAppVersionPatch = bytecodePatch(
     name = "Spoof app version",
+    use = false,
     description = "Adds an option to trick YouTube into thinking you are running an older version of the app. " +
             "This can be used to restore old UI elements and features."
 ) {

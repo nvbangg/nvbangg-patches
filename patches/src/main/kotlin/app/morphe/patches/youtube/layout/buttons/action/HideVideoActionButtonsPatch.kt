@@ -13,6 +13,7 @@ import app.morphe.patches.youtube.misc.settings.PreferenceScreen
 @Suppress("unused")
 val hideVideoActionButtonsPatch = resourcePatch(
     name = "Hide video action buttons",
+    use = false,
     description = "Adds options to hide action buttons (such as the Download button) under videos. " +
             "Patching version 20.21.37 or lower can hide more player button types."
 ) {

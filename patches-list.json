@@ -1,10 +1,10 @@
 {
-  "version": "1.8.0",
+  "version": "v1.8.0",
   "patches": [
     {
       "name": "Alternative thumbnails",
       "description": "Adds options to replace video thumbnails using the DeArrow API or image captures from the video.",
-      "use": true,
+      "use": false,
       "dependencies": [
         "BytecodePatch",
         "BytecodePatch",
@@ -26,7 +26,7 @@
     {
       "name": "Auto captions",
       "description": "Adds an option to disable captions from being automatically enabled.",
-      "use": true,
+      "use": false,
       "dependencies": [
         "BytecodePatch",
         "BytecodePatch",
@@ -85,7 +85,7 @@
     {
       "name": "Bypass image region restrictions",
       "description": "Adds an option to use a different host for user avatar and channel images and can fix missing images that are blocked in some countries.",
-      "use": true,
+      "use": false,
       "dependencies": [
         "BytecodePatch",
         "BytecodePatch",
@@ -106,7 +106,7 @@
     {
       "name": "Change form factor",
       "description": "Adds an option to change the UI appearance to a phone, tablet, or automotive device.",
-      "use": true,
+      "use": false,
       "dependencies": [
         "BytecodePatch",
         "BytecodePatch",
@@ -234,7 +234,7 @@
     {
       "name": "Check watch history domain name resolution",
       "description": "Checks if the device DNS server is preventing user watch history from being saved.",
-      "use": true,
+      "use": false,
       "dependencies": [
         "BytecodePatch"
       ],
@@ -251,7 +251,7 @@
     {
       "name": "Check watch history domain name resolution",
       "description": "Checks if the device DNS server is preventing user watch history from being saved.",
-      "use": true,
+      "use": false,
       "dependencies": [
         "BytecodePatch"
       ],
@@ -270,7 +270,7 @@
     {
       "name": "Copy video URL",
       "description": "Adds options to display buttons in the video player to copy video URLs.",
-      "use": true,
+      "use": false,
       "dependencies": [
         "ResourcePatch",
         "BytecodePatch",
@@ -291,7 +291,7 @@
     {
       "name": "Custom branding",
       "description": "Adds options to change the app icon and app name. Branding cannot be changed for mounted (root) installations.",
-      "use": true,
+      "use": false,
       "dependencies": [
         "BytecodePatch",
         "BytecodePatch",
@@ -330,7 +330,7 @@
     {
       "name": "Custom branding",
       "description": "Adds options to change the app icon and app name. Branding cannot be changed for mounted (root) installations.",
-      "use": true,
+      "use": false,
       "dependencies": [
         "BytecodePatch",
         "ResourcePatch",
@@ -370,7 +370,7 @@
     {
       "name": "Custom player overlay opacity",
       "description": "Adds an option to change the opacity of the video player background when player controls are visible.",
-      "use": true,
+      "use": false,
       "dependencies": [
         "BytecodePatch",
         "ResourcePatch"
@@ -390,7 +390,7 @@
     {
       "name": "Disable double tap actions",
       "description": "Adds an option to disable player double tap gestures.",
-      "use": true,
+      "use": false,
       "dependencies": [
         "BytecodePatch",
         "BytecodePatch",
@@ -411,7 +411,7 @@
     {
       "name": "Disable fullscreen ambient mode",
       "description": "Adds an option to disable the ambient mode when in fullscreen.",
-      "use": true,
+      "use": false,
       "dependencies": [
         "BytecodePatch",
         "BytecodePatch"
@@ -431,7 +431,7 @@
     {
       "name": "Disable haptic feedback",
       "description": "Adds an option to disable haptic feedback in the player for various actions.",
-      "use": true,
+      "use": false,
       "dependencies": [
         "BytecodePatch"
       ],
@@ -450,7 +450,7 @@
     {
       "name": "Disable player popup panels",
       "description": "Adds an option to disable panels (such as live chat) from opening automatically.",
-      "use": true,
+      "use": false,
       "dependencies": [
         "BytecodePatch",
         "BytecodePatch"
@@ -491,7 +491,7 @@
     {
       "name": "Disable rolling number animations",
       "description": "Adds an option to disable rolling number animations of video view count, user likes, and upload time.",
-      "use": true,
+      "use": false,
       "dependencies": [
         "BytecodePatch",
         "BytecodePatch"
@@ -511,7 +511,7 @@
     {
       "name": "Disable sign in to TV popup",
       "description": "Adds an option to disable the popup asking to sign into a TV on the same local network.",
-      "use": true,
+      "use": false,
       "dependencies": [
         "BytecodePatch",
         "BytecodePatch",
@@ -532,7 +532,7 @@
     {
       "name": "Disable video codecs",
       "description": "Adds options to disable HDR and VP9 codecs.",
-      "use": true,
+      "use": false,
       "dependencies": [
         "BytecodePatch",
         "BytecodePatch",
@@ -553,7 +553,7 @@
     {
       "name": "Double tap to seek",
       "description": "Adds additional double-tap to seek values to the YouTube settings menu.",
-      "use": true,
+      "use": false,
       "dependencies": [
         "BytecodePatch"
       ],
@@ -572,7 +572,7 @@
     {
       "name": "Downloads",
       "description": "Adds support to download videos with an external downloader app using the in-app download button or a video player action button.",
-      "use": true,
+      "use": false,
       "dependencies": [
         "ResourcePatch",
         "BytecodePatch",
@@ -593,7 +593,7 @@
     {
       "name": "Enable debugging",
       "description": "Adds options for debugging and exporting Morphe logs to the clipboard.",
-      "use": true,
+      "use": false,
       "dependencies": [
         "ResourcePatch",
         "BytecodePatch",
@@ -612,7 +612,7 @@
     {
       "name": "Enable debugging",
       "description": "Adds options for debugging and exporting Morphe logs to the clipboard.",
-      "use": true,
+      "use": false,
       "dependencies": [
         "ResourcePatch",
         "BytecodePatch",
@@ -651,7 +651,7 @@
     {
       "name": "Exit fullscreen mode",
       "description": "Adds options to automatically exit fullscreen mode when a video reaches the end.",
-      "use": true,
+      "use": false,
       "dependencies": [
         "BytecodePatch",
         "BytecodePatch",
@@ -674,7 +674,7 @@
     {
       "name": "Force original audio",
       "description": "Adds an option to always use the original audio track.",
-      "use": true,
+      "use": false,
       "dependencies": [
         "BytecodePatch",
         "BytecodePatch",
@@ -693,7 +693,7 @@
     {
       "name": "Force original audio",
       "description": "Adds an option to always use the original audio track.",
-      "use": true,
+      "use": false,
       "dependencies": [
         "BytecodePatch",
         "BytecodePatch",
@@ -839,7 +839,7 @@
     {
       "name": "Hide autoplay preview",
       "description": "Adds an option to hide the autoplay preview at the end of videos.",
-      "use": true,
+      "use": false,
       "dependencies": [
         "BytecodePatch",
         "BytecodePatch",
@@ -897,7 +897,7 @@
     {
       "name": "Hide end screen cards",
       "description": "Adds an option to hide suggested video cards at the end of videos.",
-      "use": true,
+      "use": false,
       "dependencies": [
         "BytecodePatch",
         "ResourcePatch",
@@ -918,7 +918,7 @@
     {
       "name": "Hide end screen suggested video",
       "description": "Adds an option to hide the suggested video at the end of videos.",
-      "use": true,
+      "use": false,
       "dependencies": [
         "BytecodePatch"
       ],
@@ -937,7 +937,7 @@
     {
       "name": "Hide info cards",
       "description": "Adds an option to hide info cards that creators add in the video player.",
-      "use": true,
+      "use": false,
       "dependencies": [
         "BytecodePatch",
         "BytecodePatch",
@@ -959,7 +959,7 @@
     {
       "name": "Hide layout components",
       "description": "Adds options to hide general layout components.",
-      "use": true,
+      "use": false,
       "dependencies": [
         "BytecodePatch",
         "BytecodePatch",
@@ -1001,7 +1001,7 @@
     {
       "name": "Hide player flyout menu items",
       "description": "Adds options to hide menu items that appear when pressing the gear icon in the video player.",
-      "use": true,
+      "use": false,
       "dependencies": [
         "BytecodePatch",
         "BytecodePatch",
@@ -1022,7 +1022,7 @@
     {
       "name": "Hide player overlay buttons",
       "description": "Adds options to hide the player Cast, Autoplay, Captions, Previous & Next buttons, and the player control buttons background.",
-      "use": true,
+      "use": false,
       "dependencies": [
         "BytecodePatch",
         "BytecodePatch",
@@ -1044,7 +1044,7 @@
     {
       "name": "Hide related video overlay",
       "description": "Adds an option to hide the related video overlay shown when swiping up in fullscreen.",
-      "use": true,
+      "use": false,
       "dependencies": [
         "BytecodePatch",
         "BytecodePatch",
@@ -1065,7 +1065,7 @@
     {
       "name": "Hide timestamp",
       "description": "Adds an option to hide the timestamp in the bottom left of the video player.",
-      "use": true,
+      "use": false,
       "dependencies": [
         "BytecodePatch",
         "BytecodePatch"
@@ -1085,7 +1085,7 @@
     {
       "name": "Hide video action buttons",
       "description": "Adds options to hide action buttons (such as the Download button) under videos. Patching version 20.21.37 or lower can hide more player button types.",
-      "use": true,
+      "use": false,
       "dependencies": [
         "ResourcePatch",
         "BytecodePatch",
@@ -1106,7 +1106,7 @@
     {
       "name": "Loop video",
       "description": "Adds an option to loop videos and display loop video button in the video player.",
-      "use": true,
+      "use": false,
       "dependencies": [
         "BytecodePatch",
         "BytecodePatch",
@@ -1127,7 +1127,7 @@
     {
       "name": "Miniplayer",
       "description": "Adds options to change the in-app minimized player.",
-      "use": true,
+      "use": false,
       "dependencies": [
         "BytecodePatch",
         "BytecodePatch",
@@ -1191,7 +1191,7 @@
     {
       "name": "Open Shorts in regular player",
       "description": "Adds options to open Shorts in the regular video player.",
-      "use": true,
+      "use": false,
       "dependencies": [
         "BytecodePatch",
         "BytecodePatch",
@@ -1234,7 +1234,7 @@
     {
       "name": "Open videos fullscreen",
       "description": "Adds an option to open videos in full screen portrait mode.",
-      "use": true,
+      "use": false,
       "dependencies": [
         "BytecodePatch",
         "BytecodePatch"
@@ -1335,7 +1335,7 @@
     {
       "name": "Remove viewer discretion dialog",
       "description": "Adds an option to remove the dialog that appears when opening a video that has been age-restricted by accepting it automatically. This does not bypass the age restriction.",
-      "use": true,
+      "use": false,
       "dependencies": [
         "BytecodePatch",
         "BytecodePatch"
@@ -1355,7 +1355,7 @@
     {
       "name": "Return YouTube Dislike",
       "description": "Adds an option to show the dislike count of videos with Return YouTube Dislike.",
-      "use": true,
+      "use": false,
       "dependencies": [
         "BytecodePatch",
         "BytecodePatch",
@@ -1417,7 +1417,7 @@
     {
       "name": "Seekbar",
       "description": "Adds options to disable precise seeking when swiping up on the seekbar, slide to seek instead of playing at 2x speed when pressing and holding, tapping the player seekbar to seek, and hiding the video player seekbar.",
-      "use": true,
+      "use": false,
       "dependencies": [
         "BytecodePatch",
         "BytecodePatch",
@@ -1486,7 +1486,7 @@
     {
       "name": "Spoof app version",
       "description": "Adds an option to trick YouTube into thinking you are running an older version of the app. This can be used to restore old UI elements and features.",
-      "use": true,
+      "use": false,
       "dependencies": [
         "ResourcePatch",
         "BytecodePatch",
@@ -1508,7 +1508,7 @@
     {
       "name": "Spoof device dimensions",
       "description": "Adds an option to spoof the device dimensions which can unlock higher video qualities.",
-      "use": true,
+      "use": false,
       "dependencies": [
         "BytecodePatch",
         "BytecodePatch"
@@ -1569,7 +1569,7 @@
     {
       "name": "Swipe controls",
       "description": "Adds options to enable and configure volume and brightness swipe controls.",
-      "use": true,
+      "use": false,
       "dependencies": [
         "BytecodePatch",
         "BytecodePatch",
@@ -1590,7 +1590,7 @@
     {
       "name": "Theme",
       "description": "Adds options for theming and applies a custom background theme (dark background theme defaults to pure black).",
-      "use": true,
+      "use": false,
       "dependencies": [
         "BytecodePatch",
         "ResourcePatch",
@@ -1630,7 +1630,7 @@
     {
       "name": "Theme",
       "description": "Adds options for theming and applies a custom background theme (dark background theme defaults to pure black).",
-      "use": true,
+      "use": false,
       "dependencies": [
         "BytecodePatch",
         "BytecodePatch",

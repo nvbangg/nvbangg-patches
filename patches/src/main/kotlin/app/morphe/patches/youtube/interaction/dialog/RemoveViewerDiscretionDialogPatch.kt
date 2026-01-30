@@ -19,6 +19,7 @@ private const val EXTENSION_CLASS_DESCRIPTOR = "Lapp/morphe/extension/youtube/pa
 
 val removeViewerDiscretionDialogPatch = bytecodePatch(
     name = "Remove viewer discretion dialog",
+    use = false,
     description = "Adds an option to remove the dialog that appears when opening a video that has been age-restricted " +
         "by accepting it automatically. This does not bypass the age restriction.",
 ) {

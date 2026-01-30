@@ -42,6 +42,7 @@ private val copyVideoUrlResourcePatch = resourcePatch {
 val copyVideoUrlPatch = bytecodePatch(
     name = "Copy video URL",
     description = "Adds options to display buttons in the video player to copy video URLs.",
+    use = false
 ) {
     dependsOn(
         copyVideoUrlResourcePatch,

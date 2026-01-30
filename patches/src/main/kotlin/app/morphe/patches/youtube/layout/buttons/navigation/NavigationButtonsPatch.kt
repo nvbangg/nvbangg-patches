@@ -64,9 +64,9 @@ val navigationButtonsPatch = bytecodePatch(
             preferences += SwitchPreference("morphe_disable_translucent_navigation_bar_light")
             preferences += SwitchPreference("morphe_disable_translucent_navigation_bar_dark")
 
-            PreferenceScreen.GENERAL_LAYOUT.addPreferences(
-                SwitchPreference("morphe_disable_translucent_status_bar")
-            )
+            // PreferenceScreen.GENERAL_LAYOUT.addPreferences(
+            //     SwitchPreference("morphe_disable_translucent_status_bar")
+            // )
 
             if (is_20_15_or_greater) {
                 preferences += SwitchPreference("morphe_navigation_bar_animations")

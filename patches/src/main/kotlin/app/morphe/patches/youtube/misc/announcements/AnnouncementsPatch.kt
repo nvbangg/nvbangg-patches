@@ -14,6 +14,7 @@ val announcementsPatch = bytecodePatch(
     // FIXME: Change this to an "Update is available" patch
     //name = "Announcements",
     description = "Adds an option to show announcements from Morphe on app startup.",
+    use = false
 ) {
     dependsOn(
         settingsPatch,

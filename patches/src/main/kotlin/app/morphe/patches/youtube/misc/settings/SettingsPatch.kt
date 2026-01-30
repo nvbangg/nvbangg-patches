@@ -206,31 +206,31 @@ val settingsPatch = bytecodePatch(
             selectable = true,
         )
 
-        if (is_19_34_or_greater) {
-            PreferenceScreen.GENERAL_LAYOUT.addPreferences(
-                SwitchPreference("morphe_restore_old_settings_menus")
-            )
-        }
+        // if (is_19_34_or_greater) {
+        //     PreferenceScreen.GENERAL_LAYOUT.addPreferences(
+        //         SwitchPreference("morphe_restore_old_settings_menus")
+        //     )
+        // }
 
         PreferenceScreen.GENERAL_LAYOUT.addPreferences(
             SwitchPreference("morphe_settings_search_history"),
         )
 
-        PreferenceScreen.GENERAL_LAYOUT.addPreferences(
-            if (is_20_31_or_greater) {
-                PreferenceCategory(
-                    titleKey = null,
-                    sorting = Sorting.UNSORTED,
-                    tag = "app.morphe.extension.shared.settings.preference.NoTitlePreferenceCategory",
-                    preferences = setOf(
-                        SwitchPreference("morphe_show_menu_icons"),
-                        SwitchPreference("morphe_settings_disable_bold_icons")
-                    )
-                )
-            } else {
-                SwitchPreference("morphe_show_menu_icons")
-            }
-        )
+        // PreferenceScreen.GENERAL_LAYOUT.addPreferences(
+        //     if (is_20_31_or_greater) {
+        //         PreferenceCategory(
+        //             titleKey = null,
+        //             sorting = Sorting.UNSORTED,
+        //             tag = "app.morphe.extension.shared.settings.preference.NoTitlePreferenceCategory",
+        //             preferences = setOf(
+        //                 SwitchPreference("morphe_show_menu_icons"),
+        //                 SwitchPreference("morphe_settings_disable_bold_icons")
+        //             )
+        //         )
+        //     } else {
+        //         SwitchPreference("morphe_show_menu_icons")
+        //     }
+        // )
 
         PreferenceScreen.MISC.addPreferences(
             TextPreference(

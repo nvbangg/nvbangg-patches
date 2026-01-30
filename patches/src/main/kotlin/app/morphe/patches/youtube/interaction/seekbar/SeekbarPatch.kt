@@ -5,6 +5,7 @@ import app.morphe.patcher.patch.bytecodePatch
 @Suppress("unused")
 val seekbarPatch = bytecodePatch(
     name = "Seekbar",
+    use = false,
     description = "Adds options to disable precise seeking when swiping up on the seekbar, " +
             "slide to seek instead of playing at 2x speed when pressing and holding, " +
             "tapping the player seekbar to seek, and hiding the video player seekbar."

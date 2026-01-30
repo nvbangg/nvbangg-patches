@@ -13,6 +13,7 @@ private const val EXTENSION_CLASS_DESCRIPTOR =
 val spoofDeviceDimensionsPatch = bytecodePatch(
     name = "Spoof device dimensions",
     description = "Adds an option to spoof the device dimensions which can unlock higher video qualities.",
+    use = false
 ) {
     dependsOn(
         sharedExtensionPatch,

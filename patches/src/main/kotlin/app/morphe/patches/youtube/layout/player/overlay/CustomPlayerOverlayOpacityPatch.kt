@@ -17,6 +17,7 @@ private const val EXTENSION_CLASS_DESCRIPTOR =
 val customPlayerOverlayOpacityPatch = bytecodePatch(
     name = "Custom player overlay opacity",
     description = "Adds an option to change the opacity of the video player background when player controls are visible.",
+    use = false
 ) {
     dependsOn(settingsPatch,
         resourceMappingPatch,

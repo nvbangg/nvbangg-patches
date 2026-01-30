@@ -12,6 +12,7 @@ private const val EXTENSION_CLASS_DESCRIPTOR = "Lapp/morphe/extension/youtube/pa
 val playerPopupPanelsPatch = bytecodePatch(
     name = "Disable player popup panels",
     description = "Adds an option to disable panels (such as live chat) from opening automatically.",
+    use = false
 ) {
     dependsOn(
         sharedExtensionPatch,

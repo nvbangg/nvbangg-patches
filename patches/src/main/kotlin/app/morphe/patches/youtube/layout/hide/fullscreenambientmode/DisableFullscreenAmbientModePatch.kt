@@ -18,6 +18,7 @@ private const val EXTENSION_CLASS_DESCRIPTOR =
 val disableFullscreenAmbientModePatch = bytecodePatch(
     name = "Disable fullscreen ambient mode",
     description = "Adds an option to disable the ambient mode when in fullscreen.",
+    use = false
 ) {
     dependsOn(
         settingsPatch,
