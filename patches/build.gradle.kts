@@ -3,7 +3,7 @@ group = "app.morphe"
 patches {
     about {
         name = "nvbangg patches"
-        description = "Patches for Morphe"
+        description = "Simple Patches for Morphe"
         source = "git@github.com:nvbangg/nvbangg-patches.git"
         author = "nvbangg"
         contact = "https://github.com/nvbangg"
