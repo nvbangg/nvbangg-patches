@@ -17,6 +17,7 @@ private const val EXTENSION_CLASS_DESCRIPTOR = "Lapp/morphe/extension/youtube/pa
 val loopVideoPatch = bytecodePatch(
     name = "Loop video",
     description = "Adds an option to loop videos and display loop video button in the video player.",
+    use = false
 ) {
     dependsOn(
         sharedExtensionPatch,

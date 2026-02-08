@@ -38,6 +38,7 @@ internal fun enableDebuggingPatch(
 ) = bytecodePatch(
     name = "Enable debugging",
     description = "Adds options for debugging and exporting Morphe logs to the clipboard.",
+    use = false
 ) {
 
     dependsOn(

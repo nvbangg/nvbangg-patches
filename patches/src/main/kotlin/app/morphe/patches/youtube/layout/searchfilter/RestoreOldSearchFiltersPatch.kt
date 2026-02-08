@@ -24,6 +24,7 @@ private const val EXTENSION_CLASS_DESCRIPTOR =
 val restoreOldSearchFiltersPatch = bytecodePatch(
     name = "Restore old search filters",
     description = "Adds an option to restore the old search filters.",
+    use = false
 ) {
     dependsOn(
         sharedExtensionPatch,

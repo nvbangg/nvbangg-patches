@@ -49,6 +49,7 @@ private const val FILTER_CLASS_DESCRIPTOR =
 val returnYouTubeDislikePatch = bytecodePatch(
     name = "Return YouTube Dislike",
     description = "Adds an option to show the dislike count of videos with Return YouTube Dislike.",
+    use = false
 ) {
     dependsOn(
         settingsPatch,
