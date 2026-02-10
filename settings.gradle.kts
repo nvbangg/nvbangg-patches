@@ -1,4 +1,4 @@
-rootProject.name = "morphe-patches"
+rootProject.name = "nvbangg-patches"
 
 pluginManagement {
     repositories {

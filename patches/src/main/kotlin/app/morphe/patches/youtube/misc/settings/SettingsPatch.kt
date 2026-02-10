@@ -211,19 +211,19 @@ val settingsPatch = bytecodePatch(
             selectable = true,
         )
 
-        if (is_19_34_or_greater) {
-            PreferenceScreen.GENERAL_LAYOUT.addPreferences(
-                SwitchPreference("morphe_restore_old_settings_menus")
-            )
-        }
+        // if (is_19_34_or_greater) {
+        //     PreferenceScreen.GENERAL_LAYOUT.addPreferences(
+        //         SwitchPreference("morphe_restore_old_settings_menus")
+        //     )
+        // }
 
         PreferenceScreen.GENERAL_LAYOUT.addPreferences(
             SwitchPreference("morphe_settings_search_history"),
         )
 
-        PreferenceScreen.GENERAL_LAYOUT.addPreferences(
-            SwitchPreference("morphe_show_menu_icons")
-        )
+        // PreferenceScreen.GENERAL_LAYOUT.addPreferences(
+        //     SwitchPreference("morphe_show_menu_icons")
+        // )
 
         PreferenceScreen.MISC.addPreferences(
             TextPreference(

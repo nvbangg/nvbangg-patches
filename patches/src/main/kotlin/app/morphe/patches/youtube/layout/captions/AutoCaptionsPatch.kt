@@ -14,6 +14,7 @@ private const val EXTENSION_CLASS_DESCRIPTOR =
 
 internal val autoCaptionsPatch = bytecodePatch(
     description = "Adds an option to disable captions from being automatically enabled.",
+    use = false
 ) {
     dependsOn(
         sharedExtensionPatch,

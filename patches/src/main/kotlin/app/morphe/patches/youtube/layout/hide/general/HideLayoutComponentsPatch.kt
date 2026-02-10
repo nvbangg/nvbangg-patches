@@ -101,6 +101,7 @@ private const val KEYWORD_FILTER_CLASS_NAME =
 val hideLayoutComponentsPatch = bytecodePatch(
     name = "Hide layout components",
     description = "Adds options to hide general layout components.",
+    use = false
 
 ) {
     dependsOn(

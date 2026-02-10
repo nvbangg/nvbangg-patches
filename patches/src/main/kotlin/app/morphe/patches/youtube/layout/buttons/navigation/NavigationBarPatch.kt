@@ -62,18 +62,18 @@ val navigationBarPatch = bytecodePatch(
             SwitchPreference("morphe_narrow_navigation_buttons"),
         )
 
-        if (is_19_25_or_greater) {
-            navPreferences += SwitchPreference("morphe_disable_translucent_navigation_bar_light")
-            navPreferences += SwitchPreference("morphe_disable_translucent_navigation_bar_dark")
+        // if (is_19_25_or_greater) {
+        //     navPreferences += SwitchPreference("morphe_disable_translucent_navigation_bar_light")
+        //     navPreferences += SwitchPreference("morphe_disable_translucent_navigation_bar_dark")
 
-            PreferenceScreen.GENERAL_LAYOUT.addPreferences(
-                SwitchPreference("morphe_disable_translucent_status_bar")
-            )
+        //     PreferenceScreen.GENERAL_LAYOUT.addPreferences(
+        //         SwitchPreference("morphe_disable_translucent_status_bar")
+        //     )
 
-            if (is_20_15_or_greater) {
-                navPreferences += SwitchPreference("morphe_navigation_bar_animations")
-            }
-        }
+        //     if (is_20_15_or_greater) {
+        //         navPreferences += SwitchPreference("morphe_navigation_bar_animations")
+        //     }
+        // }
 
         PreferenceScreen.GENERAL_LAYOUT.addPreferences(
             PreferenceScreenPreference(

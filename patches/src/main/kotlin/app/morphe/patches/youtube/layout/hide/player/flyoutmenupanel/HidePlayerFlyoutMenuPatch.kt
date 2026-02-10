@@ -13,6 +13,7 @@ import app.morphe.patches.youtube.misc.settings.settingsPatch
 val hidePlayerFlyoutMenuPatch = bytecodePatch(
     name = "Hide player flyout menu items",
     description = "Adds options to hide menu items that appear when pressing the gear icon in the video player.",
+    use = false
 ) {
     dependsOn(
         lithoFilterPatch,

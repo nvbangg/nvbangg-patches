@@ -30,6 +30,7 @@ private const val EXTENSION_CLASS_DESCRIPTOR =
 val ambientModePatch = bytecodePatch(
     name = "Ambient mode",
     description = "Adds options to bypass power saving restrictions for Ambient mode and disable it entirely or in fullscreen.",
+    use = false
 ) {
     dependsOn(
         settingsPatch,

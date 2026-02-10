@@ -33,6 +33,7 @@ val hidePlayerOverlayButtonsPatch = bytecodePatch(
     name = "Hide player overlay buttons",
     description = "Adds options to hide the player Cast, Autoplay, Captions, Previous & Next buttons, and the player " +
         "control buttons background.",
+    use = false
 ) {
     dependsOn(
         sharedExtensionPatch,
