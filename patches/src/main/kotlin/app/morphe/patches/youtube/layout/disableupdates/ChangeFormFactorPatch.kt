@@ -23,9 +23,9 @@ val disableLayoutUpdatesPatch = bytecodePatch(
     compatibleWith(COMPATIBILITY_YOUTUBE)
 
     execute {
-        PreferenceScreen.GENERAL_LAYOUT.addPreferences(
-            SwitchPreference("morphe_disable_layout_updates")
-        )
+        // PreferenceScreen.GENERAL_LAYOUT.addPreferences(
+        //     SwitchPreference("morphe_disable_layout_updates")
+        // )
 
         CronetHeaderFingerprint.let {
             it.method.apply {

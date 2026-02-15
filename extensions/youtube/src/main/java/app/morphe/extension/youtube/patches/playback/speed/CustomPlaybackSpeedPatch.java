@@ -58,7 +58,7 @@ public class CustomPlaybackSpeedPatch {
     /**
      * How much +/- speed adjustment buttons change the current speed.
      */
-    private static final double SPEED_ADJUSTMENT_CHANGE = 0.15;
+    private static final double SPEED_ADJUSTMENT_CHANGE = 0.25;
 
     /**
      * Scale used to convert user speed to {@link android.widget.ProgressBar#setProgress(int)}.

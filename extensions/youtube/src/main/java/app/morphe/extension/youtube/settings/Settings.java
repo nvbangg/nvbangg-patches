@@ -73,7 +73,7 @@ public class Settings extends BaseSettings {
     public static final BooleanSetting CUSTOM_SPEED_MENU = new BooleanSetting("morphe_custom_speed_menu", TRUE);
     public static final BooleanSetting RESTORE_OLD_SPEED_MENU = new BooleanSetting("morphe_restore_old_speed_menu", FALSE, parent(CUSTOM_SPEED_MENU));
     public static final StringSetting CUSTOM_PLAYBACK_SPEEDS = new StringSetting("morphe_custom_playback_speeds",
-            "0.25\n0.75\n1.0\n1.25\n1.5\n1.75\n2.0\n2.25\n2.5\n3.0", true);
+            "1.0\n1.25\n1.5\n2.0\n2.5", true);
 
     // Ads
     public static final BooleanSetting HIDE_CREATOR_STORE_SHELF = new BooleanSetting("morphe_hide_creator_store_shelf", TRUE);
