@@ -370,7 +370,7 @@
     {
       "name": "Disable DRC audio",
       "description": "Adds an option to disable dynamic range compression (DRC).",
-      "use": true,
+      "use": false,
       "dependencies": [
         "BytecodePatch",
         "BytecodePatch"
@@ -387,7 +387,7 @@
     {
       "name": "Disable DRC audio",
       "description": "Adds an option to disable dynamic range compression (DRC).",
-      "use": true,
+      "use": false,
       "dependencies": [
         "BytecodePatch",
         "BytecodePatch"

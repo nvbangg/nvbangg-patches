@@ -26,7 +26,8 @@ internal fun disableDRCAudioPatch(
     preferenceScreen: BasePreferenceScreen.Screen,
 ) = bytecodePatch(
     name = "Disable DRC audio",
-    description = "Adds an option to disable dynamic range compression (DRC)."
+    description = "Adds an option to disable dynamic range compression (DRC).",
+    use = false
 ) {
 
     block()
