@@ -1,6 +1,12 @@
-# 🧩 nvbangg Patches
+# 🧩 nvbangg-patches
+> [!NOTE]
+> Simple Patches for Morphe 
 
-Simple Patches for Morphe
+<div align="center">
+
+[![Stars](https://img.shields.io/github/stars/nvbangg/nvbangg-patches?label=Star%20this%20repo%20if%20useful%20⭐&logo=github)](https://github.com/nvbangg/nvbangg-patches) &ensp; [![Donate](https://img.shields.io/badge/Support%20this%20project-pink?style=social&logo=github-sponsors)](https://nvbangg.github.io/#donate)
+<br>👉 Related project: [Patches-APK-Builder](https://github.com/nvbangg/Patches-APK-Builder)
+</div>
 
 ## ❓ About
 
@@ -8,7 +14,7 @@ A reconfigured version of [Morphe Patches](https://morphe.software) that uses on
 
 ## 📜 License
 
-nvbangg Patches are licensed under the [GNU General Public License v3.0](LICENSE), with additional conditions under GPLv3 Section 7:
+nvbangg-patches are licensed under the [GNU General Public License v3.0](LICENSE), with additional conditions under GPLv3 Section 7:
 
 - **Attribution (7b):** Any use of this code, including derivatives, must display a visible notice:
 
