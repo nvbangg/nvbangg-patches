@@ -48,7 +48,7 @@ internal val exitFullscreenPatch = bytecodePatch(
 
             addInstruction(
                 insertIndex,
-                "invoke-static { p1 }, $EXTENSION_CLASS_DESCRIPTOR->endOfVideoReached(Ljava/lang/Enum;)V",
+                "invoke-static/range { p1 .. p1 }, $EXTENSION_CLASS_DESCRIPTOR->endOfVideoReached(Ljava/lang/Enum;)V",
             )
         }
     }

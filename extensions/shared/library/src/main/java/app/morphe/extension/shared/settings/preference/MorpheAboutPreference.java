@@ -236,8 +236,8 @@ public class MorpheAboutPreference extends Preference {
         // Description.
         html.append("<p>").append(
                 useNonBreakingHyphens(currentVersion == null || appPatchesVersion.equalsIgnoreCase(currentVersion)
-                        ? "You are using <b>nvbangg patches</b> version " + appPatchesVersion
-                        : "You are using <b>nvbangg patches</b> version " + appPatchesVersion + "<br><b>Update available</b> version " + currentVersion
+                        ? getString("morphe_settings_about_links_body_version_current", appPatchesVersion)
+                        : getString("morphe_settings_about_links_body_version_outdated", appPatchesVersion, currentVersion)
                 )
         ).append("</p>");
 
@@ -474,14 +474,17 @@ class AboutRoutes {
      * Links to use if fetch links api call fails.
      */
     private static final WebLink[] NO_CONNECTION_STATIC_LINKS = {
-            new WebLink(true, "Download Apps", "https://github.com/nvbangg/Patches-APK-Builder"),
-            new WebLink(true, "Patches Repository", "https://github.com/nvbangg/nvbangg-patches")
+            new WebLink(true, "Website", "https://morphe.software")
     };
 
-    private static final String API_URL = "https://api.github.com";
-    private static final Route.CompiledRoute API_ROUTE_ABOUT = new Route(GET, "/repos/nvbangg/nvbangg-patches").compile();
-    private static final Route.CompiledRoute API_ROUTE_PATCHES = new Route(GET,
-            "/repos/nvbangg/nvbangg-patches/releases/latest"
+    private static final String API_URL = "https://api.morphe.software/v2";
+    private static final Route.CompiledRoute API_ROUTE_ABOUT = new Route(GET, "/about").compile();
+
+    private static final String GITHUB_URL = "https://raw.githubusercontent.com";
+    private static final Route.CompiledRoute GITHUB_ROUTE_PATCHES = new Route(GET,
+            (Utils.isPreReleasePatches()
+                    ? "/MorpheApp/morphe-patches/refs/heads/dev/patches-bundle.json"
+                    : "/MorpheApp/morphe-patches/refs/heads/main/patches-bundle.json")
     ).compile();
 
     @Nullable
@@ -503,7 +506,8 @@ class AboutRoutes {
         if (!Utils.isNetworkConnected()) return null;
 
         try {
-            HttpURLConnection connection = Requester.getConnectionFromCompiledRoute(API_URL, API_ROUTE_PATCHES);
+            HttpURLConnection connection = Requester.getConnectionFromCompiledRoute(
+                    GITHUB_URL, GITHUB_ROUTE_PATCHES);
             connection.setConnectTimeout(5000);
             connection.setReadTimeout(5000);
             Logger.printDebug(() -> "Fetching latest patches version links from: " + connection.getURL());
@@ -516,7 +520,7 @@ class AboutRoutes {
             }
 
             JSONObject json = Requester.parseJSONObjectAndDisconnect(connection);
-            version = json.getString("tag_name");
+            version = json.getString("version");
             if (version.startsWith("v")) {
                 version = version.substring(1);
             }
@@ -543,59 +547,57 @@ class AboutRoutes {
     }
 
     static WebLink[] fetchAboutLinks() {
-        if (hasFetchedLinks()) return fetchedLinks;
-        return fetchedLinks = NO_CONNECTION_STATIC_LINKS;
-        // try {
-        //     if (hasFetchedLinks()) return fetchedLinks;
+        try {
+            if (hasFetchedLinks()) return fetchedLinks;
 
-        //     // Check if there is no internet connection.
-        //     if (!Utils.isNetworkConnected()) return NO_CONNECTION_STATIC_LINKS;
+            // Check if there is no internet connection.
+            if (!Utils.isNetworkConnected()) return NO_CONNECTION_STATIC_LINKS;
 
-        //     HttpURLConnection connection = Requester.getConnectionFromCompiledRoute(API_URL, API_ROUTE_ABOUT);
-        //     connection.setConnectTimeout(5000);
-        //     connection.setReadTimeout(5000);
-        //     Logger.printDebug(() -> "Fetching social links from: " + connection.getURL());
+            HttpURLConnection connection = Requester.getConnectionFromCompiledRoute(API_URL, API_ROUTE_ABOUT);
+            connection.setConnectTimeout(5000);
+            connection.setReadTimeout(5000);
+            Logger.printDebug(() -> "Fetching social links from: " + connection.getURL());
 
 
-        //     // Do not show an exception toast if the server is down
-        //     final int responseCode = connection.getResponseCode();
-        //     if (responseCode != 200) {
-        //         Logger.printDebug(() -> "Failed to get about information. Response code: " + responseCode);
-        //         return NO_CONNECTION_STATIC_LINKS;
-        //     }
+            // Do not show an exception toast if the server is down
+            final int responseCode = connection.getResponseCode();
+            if (responseCode != 200) {
+                Logger.printDebug(() -> "Failed to get about information. Response code: " + responseCode);
+                return NO_CONNECTION_STATIC_LINKS;
+            }
 
-        //     JSONObject json = Requester.parseJSONObjectAndDisconnect(connection);
+            JSONObject json = Requester.parseJSONObjectAndDisconnect(connection);
 
-        //     aboutLogoUrl = json.getJSONObject("branding").getString("logo");
+            aboutLogoUrl = json.getJSONObject("branding").getString("logo");
 
-        //     List<WebLink> links = new ArrayList<>();
+            List<WebLink> links = new ArrayList<>();
 
-        //     JSONArray donations = json.getJSONObject("donations").getJSONArray("links");
-        //     for (int i = 0, length = donations.length(); i < length; i++) {
-        //         WebLink link = new WebLink(donations.getJSONObject(i));
-        //         if (link.preferred) {
-        //             links.add(link);
-        //         }
-        //     }
+            JSONArray donations = json.getJSONObject("donations").getJSONArray("links");
+            for (int i = 0, length = donations.length(); i < length; i++) {
+                WebLink link = new WebLink(donations.getJSONObject(i));
+                if (link.preferred) {
+                    links.add(link);
+                }
+            }
 
-        //     JSONArray socials = json.getJSONArray("socials");
-        //     for (int i = 0, length = socials.length(); i < length; i++) {
-        //         WebLink link = new WebLink(socials.getJSONObject(i));
-        //         links.add(link);
-        //     }
+            JSONArray socials = json.getJSONArray("socials");
+            for (int i = 0, length = socials.length(); i < length; i++) {
+                WebLink link = new WebLink(socials.getJSONObject(i));
+                links.add(link);
+            }
 
-        //     Logger.printDebug(() -> "links: " + links);
+            Logger.printDebug(() -> "links: " + links);
 
-        //     return fetchedLinks = links.toArray(new WebLink[0]);
+            return fetchedLinks = links.toArray(new WebLink[0]);
 
-        // } catch (SocketTimeoutException ex) {
-        //     Logger.printInfo(() -> "Could not fetch about information", ex); // No toast.
-        // } catch (JSONException ex) {
-        //     Logger.printException(() -> "Could not parse about information", ex);
-        // } catch (Exception ex) {
-        //     Logger.printException(() -> "Failed to get about information", ex);
-        // }
+        } catch (SocketTimeoutException ex) {
+            Logger.printInfo(() -> "Could not fetch about information", ex); // No toast.
+        } catch (JSONException ex) {
+            Logger.printException(() -> "Could not parse about information", ex);
+        } catch (Exception ex) {
+            Logger.printException(() -> "Failed to get about information", ex);
+        }
 
-        // return NO_CONNECTION_STATIC_LINKS;
+        return NO_CONNECTION_STATIC_LINKS;
     }
 }
