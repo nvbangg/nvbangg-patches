@@ -20,8 +20,8 @@ private const val EXTENSION_CLASS_DESCRIPTOR =
 
 val alternativeThumbnailsPatch = bytecodePatch(
     name = "Alternative thumbnails",
+    use = false,
     description = "Adds options to replace video thumbnails using the DeArrow API or image captures from the video.",
-    use = false
 ) {
     dependsOn(
         sharedExtensionPatch,

@@ -15,8 +15,8 @@ private const val EXTENSION_CLASS_DESCRIPTOR =
 @Suppress("unused")
 val disablePlayerPopupPanelsPatch = bytecodePatch(
     name = "Disable player popup panels",
+    use = false,
     description = "Adds an option to disable panels (such as live chat) from opening automatically.",
-    use = false
 ) {
     dependsOn(
         sharedExtensionPatch,

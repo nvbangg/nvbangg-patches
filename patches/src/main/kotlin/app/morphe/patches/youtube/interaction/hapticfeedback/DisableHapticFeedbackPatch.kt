@@ -30,6 +30,7 @@ private const val EXTENSION_CLASS_DESCRIPTOR = "$EXTENSION_CLASS_DESCRIPTOR_PREF
 @Suppress("unused")
 val disableHapticFeedbackPatch = bytecodePatch(
     name = "Disable haptic feedback",
+    use = false,
     description = "Adds an option to disable haptic feedback in the player for various actions.",
 ) {
     dependsOn(

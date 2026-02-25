@@ -39,8 +39,8 @@ private const val EXTENSION_CLASS_DESCRIPTOR =
 @Suppress("unused")
 val openShortsInRegularPlayerPatch = bytecodePatch(
     name = "Open Shorts in regular player",
+    use = false,
     description = "Adds options to open Shorts in the regular video player.",
-    use = false
 ) {
     dependsOn(
         sharedExtensionPatch,

@@ -18,8 +18,8 @@ private const val EXTENSION_CLASS_DESCRIPTOR =
 
 val disableRollingNumberAnimationPatch = bytecodePatch(
     name = "Disable rolling number animations",
+    use = false,
     description = "Adds an option to disable rolling number animations of video view count, user likes, and upload time.",
-    use = false
 ) {
     dependsOn(
         sharedExtensionPatch,

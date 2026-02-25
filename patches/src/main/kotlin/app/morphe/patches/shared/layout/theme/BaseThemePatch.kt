@@ -83,9 +83,9 @@ internal fun baseThemePatch(
     executeBlock: BytecodePatchContext.() -> Unit = {}
 ) = bytecodePatch(
     name = "Theme",
+    use = false,
     description = "Adds options for theming and applies a custom background theme " +
             "(dark background theme defaults to pure black).",
-    use = false
 ) {
     darkThemeBackgroundColorOption()
 

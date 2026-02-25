@@ -21,8 +21,8 @@ private const val EXTENSION_CLASS_DESCRIPTOR =
 @Suppress("unused")
 val disableDoubleTapActionsPatch = bytecodePatch(
     name = "Disable double tap actions",
+    use = false,
     description = "Adds an option to disable player double tap gestures.",
-    use = false
 ) {
     dependsOn(
         sharedExtensionPatch,

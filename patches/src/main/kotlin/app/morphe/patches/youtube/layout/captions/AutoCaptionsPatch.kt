@@ -14,8 +14,8 @@ private const val EXTENSION_CLASS_DESCRIPTOR =
     "Lapp/morphe/extension/youtube/patches/AutoCaptionsPatch;"
 
 internal val autoCaptionsPatch = bytecodePatch(
+    use = false,
     description = "Adds an option to disable captions from being automatically enabled.",
-    use = false
 ) {
     dependsOn(
         sharedExtensionPatch,

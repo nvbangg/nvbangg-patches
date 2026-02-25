@@ -10,8 +10,8 @@ import app.morphe.util.setExtensionIsPatchIncluded
 @Suppress("unused")
 val openVideosFullscreenPatch = bytecodePatch(
     name = "Open videos fullscreen",
+    use = false,
     description = "Adds an option to open videos in full screen portrait mode.",
-    use = false
 ) {
     dependsOn(
         openVideosFullscreenHookPatch,

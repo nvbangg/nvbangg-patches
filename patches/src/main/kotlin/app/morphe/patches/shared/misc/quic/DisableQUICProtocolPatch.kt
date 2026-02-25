@@ -19,6 +19,7 @@ internal fun disableQuicProtocolPatch(
     preferenceScreen: BasePreferenceScreen.Screen,
 ) = bytecodePatch(
     name = "Disable QUIC protocol",
+    use = false,
     description = "Adds an option to disable the QUIC (Quick UDP Internet Connections) network protocol."
 ) {
     block()

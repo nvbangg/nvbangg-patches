@@ -24,8 +24,8 @@ private const val EXTENSION_CLASS_DESCRIPTOR =
 @Suppress("unused")
 val hideAutoplayPreviewPatch = bytecodePatch(
     name = "Hide autoplay preview",
+    use = false,
     description = "Adds an option to hide the autoplay preview at the end of videos.",
-    use = false
 ) {
     dependsOn(
         settingsPatch,

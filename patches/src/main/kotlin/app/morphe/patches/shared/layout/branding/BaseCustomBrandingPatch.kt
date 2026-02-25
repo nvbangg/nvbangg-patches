@@ -85,9 +85,9 @@ internal fun baseCustomBrandingPatch(
     executeBlock: ResourcePatchContext.() -> Unit = {}
 ): ResourcePatch = resourcePatch(
     name = "Custom branding",
+    use = false,
     description = "Adds options to change the app icon and app name. " +
-            "Branding cannot be changed for mounted (root) installations.",
-    use = false
+            "Branding cannot be changed for mounted (root) installations."
 ) {
     val customName by stringOption(
         key = "customName",
