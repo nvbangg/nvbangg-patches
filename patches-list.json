@@ -1,5 +1,5 @@
 {
-  "version": "v1.15.0",
+  "version": "v1.15.1",
   "patches": [
     {
       "name": "Alternative thumbnails",
@@ -155,7 +155,7 @@
     {
       "name": "Change miniplayer color",
       "description": "Adds an option to change the miniplayer background color to match the fullscreen player.",
-      "use": true,
+      "use": false,
       "dependencies": [
         "BytecodePatch",
         "BytecodePatch",
@@ -922,7 +922,7 @@
     {
       "name": "Hide category bar",
       "description": "Adds an option to hide the category bar at the top of the homepage.",
-      "use": true,
+      "use": false,
       "dependencies": [
         "BytecodePatch",
         "BytecodePatch"

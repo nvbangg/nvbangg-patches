@@ -236,8 +236,8 @@ public class MorpheAboutPreference extends Preference {
         // Description.
         html.append("<p>").append(
                 useNonBreakingHyphens(currentVersion == null || appPatchesVersion.equalsIgnoreCase(currentVersion)
-                        ? getString("morphe_settings_about_links_body_version_current", appPatchesVersion)
-                        : getString("morphe_settings_about_links_body_version_outdated", appPatchesVersion, currentVersion)
+                        ? "You are using <b>nvbangg-patches</b> version <b>" + appPatchesVersion + "</b>"
+                        : "You are using <b>nvbangg-patches</b> version <b>" + appPatchesVersion + "</b><br>Latest version: <b>" + currentVersion + "</b>"
                 )
         ).append("</p>");
 
@@ -474,7 +474,8 @@ class AboutRoutes {
      * Links to use if fetch links api call fails.
      */
     private static final WebLink[] NO_CONNECTION_STATIC_LINKS = {
-            new WebLink(true, "Website", "https://morphe.software")
+            new WebLink(true, "Downloads", "https://github.com/nvbangg/Patches-APK-Builder"),
+            new WebLink(true, "Patches", "https://github.com/nvbangg/nvbangg-patches")
     };
 
     private static final String API_URL = "https://api.morphe.software/v2";
